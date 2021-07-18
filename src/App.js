@@ -6,7 +6,9 @@ import AddTask from "./components/ToDo-List/AddTask";
 import { useState, useEffect } from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import DataFetching from "./components/API/DataFetching";
-import ContextTest from "./components/Context/ContextTest";
+import ContextTest from "./components/ContextHook/ContextTest";
+import CounterOne from "./components/ReducerHook/CounterOne";
+import Reducer from "./components/ReducerHook/Reducer";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -103,6 +105,7 @@ const toggleReminder = async (id) => {
         <Route path='/about' component={About}></Route>
         <Route path='/api' component={DataFetching}></Route>
         <Route path='/context' component={ContextTest}></Route>
+        <Route path='/reducer' component={Reducer}></Route>
       <Footer />
     </div>
     </Router>
