@@ -37,7 +37,6 @@ function DataFetching() {
 
     return (
         <div>
-            <Link to="/">Go Back</Link >
             <input type='number' value={id} onChange={e => setId(e.target.value)}></input>
             <button onClick={handleClick}>Fetch Post</button>
             <p>{post.body}</p>

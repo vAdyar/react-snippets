@@ -42,11 +42,6 @@ const About = () => {
             <hr />
             <IntervalHookCounter />
             <hr /> <hr />
-
-
-
-
-            <Link to="/">Go Back</Link >
         </div>
     )
 }

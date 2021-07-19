@@ -1,5 +1,6 @@
 import React from 'react'
 import CounterOne from './CounterOne'
+import CounterThree from './CounterThree'
 import CounterTwo from './CounterTwo'
 
 function Reducer() {
@@ -8,6 +9,8 @@ function Reducer() {
             <CounterOne />
             <hr />
             <CounterTwo />
+            <hr />
+            <CounterThree />
         </div>
     )
 }
