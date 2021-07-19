@@ -9,6 +9,7 @@ function ParentComponent() {
     const [salary, setSalary] = useState(10000)
 
     // useCallbak is use to send a cached function to the component during re-rendering in order to prevent the reload of component.
+    // This will not invoke the function as contrary to the useMemo hook
     const incrementSalary = useCallback(() => {
         setSalary( prevSalary => prevSalary + 1000)
     }, [salary])
