@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
+import CounterOne from '../CustomHook/CounterOne'
+import DocTitleOne from '../CustomHook/DocTitleOne'
+import UserForm from '../CustomHook/UserForm'
 import FocusInput from './FocusInput'
 
 function HookTimer() {
@@ -20,6 +23,12 @@ function HookTimer() {
         <div>
             Hook Timer - {timer}
             <button onClick={() => clearInterval(intervalRef.current)}>Clear Hook timer </button>
+            <hr />
+            <DocTitleOne />
+            <hr />
+            <CounterOne />
+            <hr />
+            <UserForm />
         </div>
     )
 }
