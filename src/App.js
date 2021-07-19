@@ -12,6 +12,7 @@ import Reducer from "./components/ReducerHook/Reducer";
 import DataFetchingTwo from "./components/API/DataFetchingTwo";
 import ParentComponent from "./components/CallbackHook/ParentComponent";
 import Counter from "./components/MemoHook/Counter";
+import HookTimer from "./components/RefHook/HookTimer";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -112,6 +113,7 @@ const toggleReminder = async (id) => {
         <Route path='/reducer' component={Reducer}></Route>
         <Route path='/callback' component={ParentComponent}></Route>
         <Route path='/memo' component={Counter}></Route>
+        <Route path='/ref' component={HookTimer}></Route>
       <Footer />
     </div>
     </Router>
