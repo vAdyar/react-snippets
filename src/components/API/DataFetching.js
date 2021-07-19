@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from "react-router-dom"
 import axios from 'axios'
 
 
@@ -10,6 +9,8 @@ function DataFetching() {
     const [post, setPost] = useState({})
     const [id, setId] = useState(1)
     const [idFromButtoClick, setIdFromButtonClick] = useState(1)
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState('')
 
     const handleClick = () => {
         setIdFromButtonClick(id)
@@ -19,9 +20,13 @@ function DataFetching() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res => {
             console.log(res)
+            setLoading(false)
             setPosts(res.data)
+            setError('')
         }).catch(err => {
             console.log(err)
+            setLoading(false)
+            setError('Something went wrong')
         })
     }, [])
 
@@ -41,11 +46,12 @@ function DataFetching() {
             <button onClick={handleClick}>Fetch Post</button>
             <p>{post.body}</p>
             <hr />
-            <ul>               
+            {error ? error : ''}
+            {loading ? 'Loading' : <ul>               
                 {posts.map(post =>
                     <li key={post.id}>{post.title}</li>
                 )}
-            </ul>
+            </ul>}
 
         </div>
     )
