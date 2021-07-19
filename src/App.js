@@ -10,6 +10,7 @@ import ContextTest from "./components/ContextHook/ContextTest";
 import CounterOne from "./components/ReducerHook/CounterOne";
 import Reducer from "./components/ReducerHook/Reducer";
 import DataFetchingTwo from "./components/API/DataFetchingTwo";
+import ParentComponent from "./components/CallbackHook/ParentComponent";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -108,6 +109,7 @@ const toggleReminder = async (id) => {
         <Route path='/api2' component={DataFetchingTwo}></Route>
         <Route path='/context' component={ContextTest}></Route>
         <Route path='/reducer' component={Reducer}></Route>
+        <Route path='/callback' component={ParentComponent}></Route>
       <Footer />
     </div>
     </Router>
