@@ -1,6 +1,6 @@
 import Header from "./components/ToDo-List/Header";
 import Footer from "./components/ToDo-List/Footer";
-import About  from "./components/ToDo-List/About";
+import StateHook  from "./components/StateHook/StateHook";
 import Tasks from "./components/ToDo-List/Tasks";
 import AddTask from "./components/ToDo-List/AddTask";
 import { useState, useEffect } from 'react'
@@ -13,6 +13,7 @@ import DataFetchingTwo from "./components/API/DataFetchingTwo";
 import ParentComponent from "./components/CallbackHook/ParentComponent";
 import Counter from "./components/MemoHook/Counter";
 import HookTimer from "./components/RefHook/HookTimer";
+import EffectHook from "./components/EffectHook/EffectHook";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -106,7 +107,8 @@ const toggleReminder = async (id) => {
         : 'No Tasks to display' }
           </>
         )}></Route>
-        <Route path='/about' component={About}></Route>
+        <Route path='/state' component={StateHook}></Route>
+        <Route path='/effect' component={EffectHook}></Route>
         <Route path='/api' component={DataFetching}></Route>
         <Route path='/api2' component={DataFetchingTwo}></Route>
         <Route path='/context' component={ContextTest}></Route>
